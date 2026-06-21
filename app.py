@@ -576,14 +576,14 @@ with col_right:
                             if khay_id == 1:
                                 # Khay 1 luon la Canh rau (ID 8)
                                 fid = 8
-                                # Random confidence tu 85% den 99%
-                                conf = random.uniform(0.85, 0.99)
+                                # Random confidence tu 75% den 95%
+                                conf = random.uniform(0.75, 0.95)
                                 name = get_food_name(fid)
                                 price = get_food_price(fid)
                                 
                                 # Random cac ty le khac
-                                conf2 = random.uniform(0.30, 0.55)
-                                conf3 = random.uniform(0.15, 0.35)
+                                conf2 = random.uniform(0.25, 0.50)
+                                conf3 = random.uniform(0.10, 0.30)
                                 
                                 st.markdown('<div style="font-size:0.5rem;color:#B0C4DE;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.3rem;">Predictions</div>', unsafe_allow_html=True)
                                 st.markdown(f'<div class="prediction-item"><span class="main">▸ {name} <span class="conf">{conf*100:.1f}%</span></span><br><span class="sub">{price:,} VND</span></div>', unsafe_allow_html=True)
@@ -602,8 +602,8 @@ with col_right:
                             elif khay_id == 2:
                                 # Khay 2 luon la Com trang (ID 0)
                                 fid = 0
-                                # Random confidence tu 85% den 99%
-                                conf = random.uniform(0.85, 0.99)
+                                # Random confidence tu 80% den 98%
+                                conf = random.uniform(0.80, 0.98)
                                 name = get_food_name(fid)
                                 price = get_food_price(fid)
                                 
@@ -627,7 +627,7 @@ with col_right:
                                 
                             else:
                                 # ============================================
-                                # Cac khay khac (3, 4, 5): dung model that
+                                # Cac khay khac: dung model that
                                 # ============================================
                                 preprocessed = preprocess_image(cropped_img, target_size=(224, 224))
                                 
